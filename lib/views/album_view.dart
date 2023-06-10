@@ -28,6 +28,7 @@ class AlbumView extends StatelessWidget {
       (index, song) {
         widgets.add(
           SongsList(
+            showIndex: true,
             index: index,
             song: song,
           ),

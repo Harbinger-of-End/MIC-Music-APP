@@ -24,9 +24,9 @@ class MICMusicApp extends StatelessWidget {
           textTheme: Typography.englishLike2018.apply(
             fontSizeFactor: 1.sp,
           ),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: BrandColors.brand2,
-          ),
+          // appBarTheme: const AppBarTheme(
+          //   backgroundColor: BrandColors.brand2,
+          // ),
           scaffoldBackgroundColor: BrandColors.brand2,
         ),
         initialRoute: '/singer',

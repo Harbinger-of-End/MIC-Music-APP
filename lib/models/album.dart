@@ -5,6 +5,7 @@ class Album {
   String title;
   List<Song> songs;
   Artist artist;
+  String imageUrl = 'assets/images/testimage.png';
 
   Album({
     required this.title,

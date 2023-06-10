@@ -4,33 +4,37 @@ import 'package:mic_music_app/models/song.dart';
 
 class SongsList extends StatelessWidget {
   final Song song;
-  final int index;
+  final int? index;
+  final bool showIndex;
 
   const SongsList({
     super.key,
     required this.song,
-    required this.index,
+    this.index,
+    required this.showIndex,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(
-            left: 24.sp,
-            top: 10.sp,
-          ),
-          child: Text(
-            (index + 1).toString().padLeft(2, '0'),
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Roboto',
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ),
+        showIndex
+            ? Padding(
+                padding: EdgeInsets.only(
+                  left: 24.sp,
+                  top: 10.sp,
+                ),
+                child: Text(
+                  (index! + 1).toString().padLeft(2, '0'),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Roboto',
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              )
+            : const Placeholder(),
         Padding(
           padding: EdgeInsets.only(
             left: 21.sp,
